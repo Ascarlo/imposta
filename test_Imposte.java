@@ -7,13 +7,13 @@ public class test_Imposte {
 		Scanner x = new Scanner (System.in);
 		Scanner y = new Scanner (System.in);
 
-		Imposte oggetto1 = new Imposte();
+		
 		int scelta = 0;
 		
 		System.out.print("inserisci l'ammontare dell'imposta: ");
 		double imposta = x.nextInt();
 		
-		System.out.println("l'attuale imposta base è del 4% e quella di lusso è del 10%");
+		System.out.println("l'attuale imposta base Ã¨ del 4% e quella di lusso Ã¨ del 10%");
 		System.out.print("vuoi cambiarle? ");
 		if (y.nextLine().equals("si")) {
 			
@@ -22,12 +22,12 @@ public class test_Imposte {
 			if (scelta == 1) {
 					
 				System.out.print("inserisci il valore della nuova imposta di base: ");
-				oggetto1.cambiaImpostaBase(x.nextDouble());
+				Imposte.cambiaImpostaBase(x.nextDouble());
 			}
 			else if (scelta == 2) {
 					
 				System.out.print("inserisci il valore della nuova imposta di lusso: ");
-				oggetto1.cambiaImpostaLusso(x.nextDouble());
+				Imposte.cambiaImpostaLusso(x.nextDouble());
 			}
 			else {
 					
@@ -40,12 +40,12 @@ public class test_Imposte {
 		scelta = x.nextInt();
 		if (scelta == 1) {
 				
-			double prezzo = oggetto1.ComputaCostoBase(imposta);
+			double prezzo = Imposte.ComputaCostoBase(imposta);
 			System.out.println("valore dell'imposta di base: " + prezzo);
 		}
 		else if (scelta == 2) {
 				
-			double prezzo = oggetto1.ComputaCostoLusso(imposta);
+			double prezzo = Imposte.ComputaCostoLusso(imposta);
 			System.out.println("valore dell'imposta di lusso: " + prezzo);
 		}
 		else{
